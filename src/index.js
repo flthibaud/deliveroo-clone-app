@@ -1,4 +1,5 @@
 import React from 'react';
+import { StatusBar, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
@@ -19,6 +20,9 @@ class App extends React.Component {
   async componentDidMount() {
     SplashScreen.hide();
     this.setState({ loading: false });
+    StatusBar.setBarStyle('dark-content');
+    Platform.OS === 'android' && StatusBar.setBackgroundColor('rgba(255, 255, 255, .3)');
+    StatusBar.setTranslucent(true);
   }
 
   render() {
