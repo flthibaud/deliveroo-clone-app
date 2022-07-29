@@ -2261,10 +2261,10 @@
   dependencies:
     "@react-types/shared" "^3.13.0"
 
-"@rematch/core@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@rematch/core/-/core-2.1.0.tgz#e067ed78a6895d17e3cc2e15aa0db5148c9c6279"
-  integrity sha512-izr4LlXsHp1gfK8v05FNvqSthX64cCj59/x3tu+3qNXSuSM7d1/YXAlUtBJIoX9RApr+d1mqA7CCAteUjZrdLg==
+"@rematch/core@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@rematch/core/-/core-2.2.0.tgz#c4e6cc9d369d341afe2345842f43c255b7a44e90"
+  integrity sha512-Sj3nC/2X+bOBZeOf4jdJ00nhCcx9wLbVK9SOs6eFR4Y1qKXqRY0hGigbQgfTpCdjRFlwTHHfN3m41MlNvMhDgw==
 
 "@rematch/loading@^2.1.2":
   version "2.1.2"
