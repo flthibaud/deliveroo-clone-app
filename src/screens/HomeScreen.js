@@ -1,6 +1,5 @@
 import React, { useLayoutEffect, useEffect, useState } from 'react';
 import {
-  SafeAreaView,
   Text,
   View,
   Image,
@@ -8,6 +7,7 @@ import {
   ScrollView,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import {
   AdjustmentsIcon,
   ChevronDownIcon,
@@ -44,7 +44,7 @@ const HomeScreen = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white pt-8 pb-5">
+    <SafeAreaView className="bg-white pb-5">
       {/* Header */}
       <View className="flex-row pb-3 items-center mx-4 space-x-2">
         <Image
