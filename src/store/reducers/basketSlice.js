@@ -2,7 +2,7 @@ const initialState = {
   items: [],
 };
 
-export default function livretAccueil(state = initialState, action) {
+export default function basketSlice(state = initialState, action) {
   switch (action.type) {
     case 'ADD_TO_BASKET':
       return {
@@ -38,12 +38,12 @@ export const removeFromBasket = (items) => (dispatch) => {
   dispatch({ type: 'REMOVE_FROM_BASKET', payload: items });
 };
 
-export const selectBasketItems = (state) => state.featuredRow.items;
+export const selectBasketItems = (state) => state.basketSlice.items;
 
 export const selectBasketTotal = (state) => (
-  state.featuredRow.items.reduce((total, item) => total + item.price, 0)
+  state.basketSlice.items.reduce((total, item) => total + item.price, 0)
 );
 
 export const selectBasketItemsWithId = (state, id) => (
-  state.featuredRow.items.filter((item) => item.id === id)
+  state.basketSlice.items.filter((item) => item.id === id)
 );

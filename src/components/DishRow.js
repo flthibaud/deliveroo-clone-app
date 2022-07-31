@@ -10,7 +10,7 @@ import { MinusCircleIcon, PlusCircleIcon } from 'react-native-heroicons/outline'
 import { useSelector, useDispatch } from 'react-redux';
 
 import { getImageUrl } from '../../sanity';
-import { addToBasket, removeFromBasket, selectBasketItemsWithId } from '../store/reducers/featuredRow';
+import { addToBasket, removeFromBasket, selectBasketItemsWithId } from '../store/reducers/basketSlice';
 
 const DishRow = ({
   key,

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useEffect } from 'react';
 import {
   View,
   Text,
@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import { useDispatch } from 'react-redux';
 import {
   ArrowLeftIcon,
   LocationMarkerIcon,
@@ -15,12 +16,14 @@ import {
   ChevronRightIcon,
 } from 'react-native-heroicons/outline';
 import sanityClient, { getImageUrl } from '../../sanity';
+import { setRestaurant } from '../store/reducers/restaurantSlice';
 
 import DishRow from '../components/DishRow';
 import BasketIcon from '../components/BasketIcon';
 
 const RestaurantScreen = () => {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
   const {
     params: {
       id,
@@ -35,6 +38,19 @@ const RestaurantScreen = () => {
       lat,
     },
   } = useRoute();
+
+  useEffect(() => {
+    dispatch(setRestaurant({
+      id,
+      imgUrl,
+      title,
+      rating,
+      genre,
+      address,
+      shortDescription,
+      dishes,
+    }));
+  }, [dispatch]);
 
   useLayoutEffect(() => {
     navigation.setOptions({

@@ -2,10 +2,12 @@
 import { combineReducers } from 'redux';
 
 // Imports: Reducers
-import featuredRow from './featuredRow';
+import basketSlice from './basketSlice';
+import restaurantSlice from './restaurantSlice';
 
 const rootReducer = combineReducers({
-  featuredRow,
+  basketSlice,
+  restaurantSlice,
 });
 
 // Exports
