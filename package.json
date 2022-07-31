@@ -39,7 +39,7 @@
     "react-native-screens": "^3.13.1",
     "react-native-splash-screen": "^3.3.0",
     "react-native-svg": "^12.4.0",
-    "react-native-vector-icons": "^8.1.0",
+    "react-native-vector-icons": "^9.2.0",
     "react-redux": "^7.2.5",
     "redux-flipper": "^2.0.2",
     "redux-persist": "^6.0.0",
