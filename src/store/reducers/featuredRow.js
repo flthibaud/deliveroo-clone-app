@@ -38,6 +38,12 @@ export const removeFromBasket = (items) => (dispatch) => {
   dispatch({ type: 'REMOVE_FROM_BASKET', payload: items });
 };
 
+export const selectBasketItems = (state) => state.featuredRow.items;
+
+export const selectBasketTotal = (state) => (
+  state.featuredRow.items.reduce((total, item) => total + item.price, 0)
+);
+
 export const selectBasketItemsWithId = (state, id) => (
   state.featuredRow.items.filter((item) => item.id === id)
 );
