@@ -30,7 +30,7 @@
     "react": "17.0.2",
     "react-currency-formatter": "^1.1.0",
     "react-hook-form": "^7.32.0",
-    "react-native": "0.65.1",
+    "react-native": "0.68.3",
     "react-native-flipper": "^0.156.0",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-heroicons": "^2.2.0",
