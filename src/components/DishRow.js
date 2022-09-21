@@ -12,20 +12,22 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getImageUrl } from '../../sanity';
 import { addToBasket, removeFromBasket, selectBasketItemsWithId } from '../store/reducers/basketSlice';
 
-const DishRow = ({
+function DishRow({
   key,
   id,
   name,
   description,
   price,
   image,
-}) => {
+}) {
   const [isPressed, setIsPressed] = useState(false);
   const items = useSelector((state) => selectBasketItemsWithId(state, id));
   const dispatch = useDispatch();
 
   const addItemToBasket = () => {
-    dispatch(addToBasket({ id, name, description, price, image }));
+    dispatch(addToBasket({
+      id, name, description, price, image,
+    }));
   };
 
   const removeItemFromBasket = () => {
@@ -84,6 +86,6 @@ const DishRow = ({
       )}
     </>
   );
-};
+}
 
 export default DishRow;

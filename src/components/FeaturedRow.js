@@ -5,7 +5,7 @@ import sanityClient from '../../sanity';
 
 import RestaurantCard from './RestaurantCard';
 
-const FeaturedRow = ({ id, title, description }) => {
+function FeaturedRow({ id, title, description }) {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
@@ -61,6 +61,6 @@ const FeaturedRow = ({ id, title, description }) => {
       </ScrollView>
     </View>
   );
-};
+}
 
 export default FeaturedRow;

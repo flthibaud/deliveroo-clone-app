@@ -2,11 +2,11 @@
 
 import { Platform } from 'react-native';
 
-import variable from './../variables/platform';
-import { PLATFORM } from './../variables/commonColor';
+import variable from '../variables/platform';
+import { PLATFORM } from '../variables/commonColor';
 
 export default (variables /* : * */ = variable) => {
-  const platformStyle = variables.platformStyle;
+  const { platformStyle } = variables;
 
   const tabContainerTheme = {
     elevation: 3,
@@ -19,7 +19,7 @@ export default (variables /* : * */ = variable) => {
     shadowRadius: platformStyle === PLATFORM.MATERIAL ? 1.2 : undefined,
     justifyContent: 'space-around',
     borderBottomWidth: Platform.OS === PLATFORM.IOS ? variables.borderWidth : 0,
-    borderColor: variables.topTabBarBorderColor
+    borderColor: variables.topTabBarBorderColor,
   };
 
   return tabContainerTheme;

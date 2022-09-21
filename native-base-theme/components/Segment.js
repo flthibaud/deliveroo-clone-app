@@ -1,10 +1,10 @@
 // @flow
 
-import variable from './../variables/platform';
-import { PLATFORM } from './../variables/commonColor';
+import variable from '../variables/platform';
+import { PLATFORM } from '../variables/commonColor';
 
 export default (variables /* : * */ = variable) => {
-  const platform = variables.platform;
+  const { platform } = variables;
 
   const segmentTheme = {
     height: 45,
@@ -26,31 +26,31 @@ export default (variables /* : * */ = variable) => {
       '.active': {
         backgroundColor: variables.segmentActiveBackgroundColor,
         'NativeBase.Text': {
-          color: variables.segmentActiveTextColor
+          color: variables.segmentActiveTextColor,
         },
         'NativeBase.Icon': {
-          color: variables.segmentActiveTextColor
-        }
+          color: variables.segmentActiveTextColor,
+        },
       },
       '.first': {
         borderTopLeftRadius: platform === PLATFORM.IOS ? 5 : undefined,
         borderBottomLeftRadius: platform === PLATFORM.IOS ? 5 : undefined,
-        borderLeftWidth: 1
+        borderLeftWidth: 1,
       },
       '.last': {
         borderTopRightRadius: platform === PLATFORM.IOS ? 5 : undefined,
-        borderBottomRightRadius: platform === PLATFORM.IOS ? 5 : undefined
+        borderBottomRightRadius: platform === PLATFORM.IOS ? 5 : undefined,
       },
       'NativeBase.Text': {
         color: variables.segmentTextColor,
-        fontSize: 14
+        fontSize: 14,
       },
       'NativeBase.Icon': {
         fontSize: 22,
         paddingTop: 0,
-        color: variables.segmentTextColor
-      }
-    }
+        color: variables.segmentTextColor,
+      },
+    },
   };
 
   return segmentTheme;

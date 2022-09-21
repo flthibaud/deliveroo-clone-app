@@ -9,12 +9,11 @@ const deviceHeight = Dimensions.get('window').height;
 const deviceWidth = Dimensions.get('window').width;
 const platform = Platform.OS;
 const platformStyle = PLATFORM.MATERIAL;
-const isIphoneX =
-  platform === PLATFORM.IOS &&
-  (deviceHeight === 812 ||
-    deviceWidth === 812 ||
-    deviceHeight === 896 ||
-    deviceWidth === 896);
+const isIphoneX = platform === PLATFORM.IOS
+  && (deviceHeight === 812
+    || deviceWidth === 812
+    || deviceHeight === 896
+    || deviceWidth === 896);
 
 export default {
   platformStyle,

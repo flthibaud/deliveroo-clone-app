@@ -21,7 +21,7 @@ import { setRestaurant } from '../store/reducers/restaurantSlice';
 import DishRow from '../components/DishRow';
 import BasketIcon from '../components/BasketIcon';
 
-const RestaurantScreen = () => {
+function RestaurantScreen() {
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const {
@@ -85,7 +85,10 @@ const RestaurantScreen = () => {
               <View className="flex-row items-center space-x-1">
                 <StarIcon size={22} color="green" opacity={0.5} />
                 <Text className="text-xs text-gray-500">
-                  <Text className="text-green-500">{rating}</Text> - {genre}
+                  <Text className="text-green-500">{rating}</Text>
+                  {' '}
+                  -
+                  {genre}
                 </Text>
               </View>
 
@@ -116,18 +119,20 @@ const RestaurantScreen = () => {
 
           {/* Disshrows */}
           {dishes.map((dish) => (
-            <DishRow
-              id={dish._id}
-              name={dish.name}
-              description={dish.short_description}
-              price={dish.price}
-              image={dish.image}
-            />
+            <View key={dish._id}>
+              <DishRow
+                id={dish._id}
+                name={dish.name}
+                description={dish.short_description}
+                price={dish.price}
+                image={dish.image}
+              />
+            </View>
           ))}
         </View>
       </ScrollView>
     </>
   );
-};
+}
 
 export default RestaurantScreen;

@@ -6,7 +6,7 @@ import Currency from 'react-currency-formatter';
 
 import { selectBasketItems, selectBasketTotal } from '../store/reducers/basketSlice';
 
-const BasketIcon = () => {
+function BasketIcon() {
   const items = useSelector(selectBasketItems);
   const navigation = useNavigation();
   const basketTotal = useSelector(selectBasketTotal);
@@ -31,6 +31,6 @@ const BasketIcon = () => {
       </TouchableOpacity>
     </View>
   );
-};
+}
 
 export default BasketIcon;

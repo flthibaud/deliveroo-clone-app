@@ -4,7 +4,7 @@ import CategoryCard from './CategoryCard';
 
 import sanityClient, { getImageUrl } from '../../sanity';
 
-const Categories = () => {
+function Categories() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -35,6 +35,6 @@ const Categories = () => {
       ))}
     </ScrollView>
   );
-};
+}
 
 export default Categories;

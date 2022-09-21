@@ -5,21 +5,23 @@ import {
 } from 'native-base';
 import Spacer from './Spacer';
 
-const Error = ({ title, content, tryAgain }) => (
-  <Container style={{ flex: 1 }}>
-    <Box style={{ alignSelf: 'center' }}>
-      <Spacer size={20} />
-      <Heading size="md" style={{ textAlign: 'center' }}>{title}</Heading>
-      <Text style={{ textAlign: 'center', marginBottom: 20 }}>{content}</Text>
-      {tryAgain && (
+function Error({ title, content, tryAgain }) {
+  return (
+    <Container style={{ flex: 1 }}>
+      <Box style={{ alignSelf: 'center' }}>
+        <Spacer size={20} />
+        <Heading size="md" style={{ textAlign: 'center' }}>{title}</Heading>
+        <Text style={{ textAlign: 'center', marginBottom: 20 }}>{content}</Text>
+        {tryAgain && (
         <Button block onPress={tryAgain}>
           <Text>Try Again</Text>
         </Button>
-      )}
-      <Spacer size={20} />
-    </Box>
-  </Container>
-);
+        )}
+        <Spacer size={20} />
+      </Box>
+    </Container>
+  );
+}
 
 Error.propTypes = {
   title: PropTypes.string,

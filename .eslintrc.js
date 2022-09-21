@@ -1,6 +1,6 @@
 module.exports = {
   extends: 'airbnb',
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   plugins: [
     'jest',
   ],
@@ -8,13 +8,14 @@ module.exports = {
     ecmaFeatures: {
       classes: true,
     },
+    requireConfigFile: false,
   },
   env: {
     'jest/globals': true,
   },
   rules: {
-    'max-len': [2, {'code': 110, 'tabWidth': 2, 'ignoreUrls': true}],
-    'react/jsx-filename-extension': ['error', { 'extensions': ['.js', '.jsx'] }],
+    'max-len': [2, { code: 110, tabWidth: 2, ignoreUrls: true }],
+    'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
     'global-require': 'off',
     'no-console': 'off',
     'import/no-extraneous-dependencies': 'off',
