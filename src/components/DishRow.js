@@ -13,7 +13,6 @@ import { getImageUrl } from '../../sanity';
 import { addToBasket, removeFromBasket, selectBasketItemsWithId } from '../store/reducers/basketSlice';
 
 function DishRow({
-  key,
   id,
   name,
   description,

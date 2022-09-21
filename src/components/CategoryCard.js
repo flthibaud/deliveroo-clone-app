@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View, Text, TouchableOpacity, Image,
+  Text, TouchableOpacity, Image,
 } from 'react-native';
 
 function CategoryCard({ imgUrl, title }) {

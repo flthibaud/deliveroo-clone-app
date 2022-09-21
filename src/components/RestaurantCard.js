@@ -14,7 +14,6 @@ import { truncate } from '../lib/string';
 function RestaurantCard({
   id,
   title,
-  description,
   imgUrl,
   rating,
   genre,
