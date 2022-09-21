@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import {
+  Text, TouchableOpacity, Image,
+} from 'react-native';
 
-const CategoryCard = ({ imgUrl, title }) => {
+function CategoryCard({ imgUrl, title }) {
   return (
     <TouchableOpacity
       className="relative mr-2"
@@ -15,6 +17,6 @@ const CategoryCard = ({ imgUrl, title }) => {
       </Text>
     </TouchableOpacity>
   );
-};
+}
 
 export default CategoryCard;

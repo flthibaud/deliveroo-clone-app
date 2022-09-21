@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Box } from 'native-base';
 
-const Spacer = ({ size }) => <Box style={{ flex: 1, height: size }} />;
+function Spacer({ size }) {
+  return <Box style={{ flex: 1, height: size }} />;
+}
 
 Spacer.propTypes = {
   size: PropTypes.number,

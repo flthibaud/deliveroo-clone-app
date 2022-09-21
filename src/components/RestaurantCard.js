@@ -11,10 +11,9 @@ import { useNavigation } from '@react-navigation/native';
 import { getImageUrl } from '../../sanity';
 import { truncate } from '../lib/string';
 
-const RestaurantCard = ({
+function RestaurantCard({
   id,
   title,
-  description,
   imgUrl,
   rating,
   genre,
@@ -23,7 +22,7 @@ const RestaurantCard = ({
   dishes,
   long,
   lat,
-}) => {
+}) {
   const navigation = useNavigation();
 
   return (
@@ -67,6 +66,6 @@ const RestaurantCard = ({
       </View>
     </TouchableOpacity>
   );
-};
+}
 
 export default RestaurantCard;

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import CategoryCard from './CategoryCard';
 
 import sanityClient, { getImageUrl } from '../../sanity';
 
-const Categories = () => {
+function Categories() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -35,6 +35,6 @@ const Categories = () => {
       ))}
     </ScrollView>
   );
-};
+}
 
 export default Categories;

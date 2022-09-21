@@ -19,7 +19,7 @@ import sanityClient from '../../sanity';
 import Categories from '../components/Categories';
 import FeaturedRow from '../components/FeaturedRow';
 
-const HomeScreen = () => {
+export default function HomeScreen() {
   const navigation = useNavigation();
   const [featuredCategories, setFeaturedCategories] = useState([]);
 
@@ -101,6 +101,4 @@ const HomeScreen = () => {
       </ScrollView>
     </SafeAreaView>
   );
-};
-
-export default HomeScreen;
+}

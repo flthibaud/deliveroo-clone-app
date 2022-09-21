@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, TouchableOpacity, Image, ScrollView } from 'react-native';
+import {
+  View, Text, TouchableOpacity, Image, ScrollView,
+} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useDispatch, useSelector } from 'react-redux';
@@ -10,7 +12,7 @@ import { selectRestaurant } from '../store/reducers/restaurantSlice';
 import { removeFromBasket, selectBasketItems, selectBasketTotal } from '../store/reducers/basketSlice';
 import { getImageUrl } from '../../sanity';
 
-const BasketScreen = () => {
+function BasketScreen() {
   const navigation = useNavigation();
   const restaurant = useSelector(selectRestaurant);
   const items = useSelector(selectBasketItems);
@@ -63,7 +65,11 @@ const BasketScreen = () => {
               key={key}
               className="flex-row items-center space-x-3 py-2 bg-white px-5"
             >
-              <Text className="text-[#00CCBB]">{item.length} x</Text>
+              <Text className="text-[#00CCBB]">
+                {item.length}
+                {' '}
+                x
+              </Text>
               <Image
                 source={{ uri: getImageUrl(item[0]?.image).url() }}
                 className="h-12 w-12 rounded-full"
@@ -115,6 +121,6 @@ const BasketScreen = () => {
       </View>
     </SafeAreaView>
   );
-};
+}
 
 export default BasketScreen;

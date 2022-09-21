@@ -7,7 +7,7 @@ import HomeScreen from '../screens/HomeScreen';
 import RestaurantScreen from '../screens/RestaurantScreen';
 import BasketScreen from '../screens/BasketScreen';
 
-const Routes = () => {
+function Routes() {
   const Stack = createNativeStackNavigator();
 
   return (
@@ -28,6 +28,6 @@ const Routes = () => {
       </TailwindProvider>
     </NavigationContainer>
   );
-};
+}
 
 export default Routes;
