@@ -50,7 +50,7 @@
   "devDependencies": {
     "@babel/core": "^7.19.1",
     "@babel/runtime": "^7.19.0",
-    "@testing-library/react-native": "^11.1.0",
+    "@testing-library/react-native": "^11.2.0",
     "@babel/eslint-parser": "^7.5.4",
     "babel-jest": "^29.0.3",
     "eslint": "8.23.1",
